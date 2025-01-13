@@ -1,22 +1,34 @@
 const tickRate = 1000 / 30;
-let money = 0;
+let score = 0;
 
-let homelessperson = new Building('Homeless Person', 0.1, 15, 'buyhomelessperson');
+let homelessperson = new Building('homeless Person', 0.1, 15, 'buyHomelessperson');
+let dingus = new Building('dingus (kidnap)', 5, 200, 'buydingus');
+let realsurgeon = new Building('a totally real surgeon, that is a surgeon', 15, 500, 'buyrealsurgeon');
+let davidclone = new Building('the younger david clone, likes ice cream', 50, 1000, 'buydavidclone');
 
-function incMoney() {
-    money += homelessperson.cps;
+function incScore() {
+    score += homelessperson.cps;
+    score += dingus.cps;
+    score += realsurgeon.cps;
+    score += davidclone.cps;
 }
 
-function moneyPlusPlus(){
-    money++;
-    document.getElementById('money').innerHTML = money;
-    incMoney();
+function scorePlusPlus() {
+    score++;
 }
 
+function updateButtons() {
+    homelessperson.buttonState();
+    dingus.buttonState();
+    realsurgeon.buttonState();
+    davidclone.buttonState();
+}
 
 function updatePage() {
     incScore();
-    document.getElementById('money').innerHTML = "$" + Math.floor(money).toLocaleString();
+    updateButtons();
+    document.getElementById('score').innerHTML =
+        '$' + Math.floor(score).toLocaleString();
 }
 
 setInterval(updatePage, tickRate);

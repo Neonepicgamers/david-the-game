@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
     <script src="src/building.js"></script>
+    <script src="src/upgrade.js"></script>
     <script src="src/whip.js"></script>
     <script src="src/main.js"></script>
     <title>david: the game</title>
 </head>
 <body>
+    <header>
     <h1>david: the game</h1>
     <h2>
         David saves you from your brother in a roblox game, then proceeds to nuke everyone in the area (ingame) causing you to kill him (ingame).
@@ -18,29 +21,48 @@
         <br>
 
     </h2>
+    </header>
+
+    <div class="outer">
+        <div class="click">
     <h3>money: <span class="score" id="score">0</span></h3>
 
     <button type="button" onclick="scorePlusPlus()">click to money</button>
+    </div>
 
-    <h4>buy or click until your fingers burn off</h4>
+    <div class="store">
+        <div class="buildings">
+            <div class="store-title">
+        <h4>tools, items, and people</h4>
+            </div>
 
-    <button type="button" id="buyHomelessperson" onclick="homelessperson.purchase()">
+    <button type="button" id="buyHomelessPerson" onclick="homelessperson.purchase()">
         Buy homeless person
     </button>
-    <button type="button" id="buydingus" onclick="dingus.purchase()">
+
+    <button type="button" id="buyDingus" onclick="dingus.purchase()">
         Buy dingus (kidnap)
     </button>
-    <button type="button" id="buyrealsurgeon" onclick="realsurgeon.purchase()">
+
+    <button type="button" id="buyRealSurgeon" onclick="realsurgeon.purchase()">
         Buy a totally real surgeon, that is a surgeon
     </button>
-    <button type="button" id="buydavidclone" onclick="davidclone.purchase()">
+
+    <button type="button" id="buyDavidClone" onclick="davidclone.purchase()">
         Buy the younger david clone, likes ice cream
     </button>
 
-    <h4>Upgrades:</h4>
+    </div>
+    <div class="upgrades">
+    <div class="store-title"></div>
+        <h4>little tools for the little people</h4>
+    </div>
 
-    <button type="button" id="buywhip1" onclick="whip1.purchase()">
+    <button type="button" id="buyWhipI" onclick="whip1.purchase()">
         this string whip still works on the boys!
-        </button>
+                </button>
+                </div>
+            </div>
+        <div>
     </body>
 </html>

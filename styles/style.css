@@ -1,5 +1,15 @@
+@font-face {
+    font-family: comicSans;
+    src: url(../fonts/Comic\ Sans\ MS.ttf);
+}
+
 body {
     margin: 0 15% 0 15%;
+    background-image: url(../media/imgs/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: comicSans;
+    color: rgb(181, 159, 207);
 }
 
 header {
@@ -11,11 +21,12 @@ header > h2 {
 }
 
 div.outer {
-    border: 4px solid rgb(87, 11, 209);
+    border: 4px solid rgb(129, 12, 207);
+    color: rgb(0, 175, 15);
 }
 
 div.click {
-    border-bottom: 4px solid rgb(87, 11, 209);
+    border-bottom: 4px solid rgb(129, 12, 207);
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -29,7 +40,7 @@ div.store {
 
 div.store-title {
     text-align: center;
-    border-bottom: 4px solid rgb(87, 11, 209);
+    border-bottom: 4px solid rgb(129, 12, 207);
 }
 
 div.buildings,
@@ -39,14 +50,15 @@ div.upgrades {
     flex: 50%;
     height: 50vh;
     overflow: auto;
+    color: rgb(255, 210, 127);
 }
 
 div.buildings {
-    border-right: 4px solid rgb(87, 11, 209);
+    border-right: 4px solid rgb(129, 12, 207);
 }
 
 .button {
-    border-bottom: 1px solid rgb(87, 11, 209);
+    border-bottom: 1px solid rgb(129, 12, 207);
     padding: 14px 28px;
     font-size: 1.25em;
     cursor: pointer;
@@ -55,4 +67,12 @@ div.buildings {
 
 .button:disabled:hover {
     cursor: not-allowed;
+}
+
+button > p {
+    text-align: left;
+}
+
+button > img {
+    float: right;
 }

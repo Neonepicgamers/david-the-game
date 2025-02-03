@@ -1,5 +1,5 @@
 class Building {
-    constructor(buildingName, baseCps, baseCost) {
+    constructor(buildingName, baseCps, baseCost, imgPick) {
         this.buildingName = buildingName;
         this.baseCps = baseCps / (1000 / tickRate);
         this.baseCost = baseCost;
@@ -9,6 +9,7 @@ class Building {
         this.doubleUpgrade = 1;
         this.cps = 0;
         this.visible = false;
+        this.imgPick = imgPick;
     }
 
     purchase() {
@@ -39,14 +40,19 @@ class Building {
         }
 
         document.getElementById(this.buttonId).innerHTML = 
-            'Buy ' + 
+            "<img src='" + 
+            this.imgPick +
+            "'>" +
+            "<p>" +
+            'Buy ' +
             this.buildingName +
-            ' (Cost: $' +
+            ' (Cost: ' +
             Math.ceil(this.cost).toLocaleString() +
             ') <br> Adds $' +
             (this.baseCps * this.doubleUpgrade * (1000 / tickRate)).toLocaleString() +
             ' Per Second <br> [Owned: ' +
             this.amountOwned +
-            ']';
+            ']' +
+            "</p>";
     }
 }

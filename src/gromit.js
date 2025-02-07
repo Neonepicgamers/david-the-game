@@ -1,4 +1,4 @@
-class Whip extends Upgrade {
+class Gromit extends Upgrade {
     constructor(upgradeName, cost, building, imgPick){
         super(upgradeName, cost, imgPick);
         this.building = building;
@@ -7,7 +7,6 @@ class Whip extends Upgrade {
 
     purchase() {
         super.purchase();
-        clickStrength++;
         this.building.doubleUpgrade++;
         this.building.applyDoubleUpgrade();
     }

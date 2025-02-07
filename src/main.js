@@ -1,6 +1,6 @@
 const tickRate = 1000 / 30;
 let clickStrength = 1;
-let score = 999999999999999999;
+let score = 9999999;
 
 let homelessperson = new Building('Homeless Person', 0.1, 15, "../media/imgs/homeless.jpg");
 let dingus = new Building('Dingus', 1, 100, "../media/imgs/dingus.jpg");
@@ -9,7 +9,8 @@ let davidclone = new Building('David Clone', 47, 12000, "../media/imgs/davidcln.
 let sawnick = new Building('Sawnick', 260, 130000, "../media/imgs/sawnick.gif");
 let ourpleguy = new Building('Ourple Guy', 1400, 14000000, "../media/imgs/ourpguy.gif");
 
-let whip1 = new Whip('Whip I', 100, homelessperson);
+let whip1 = new Whip('Whip I', 100, homelessperson, "../media/imgs/ourpguy.gif");
+let gromit1 = new Whip('Gromit I', 100, dingus, "../media/imgs/ourpguy.gif");
 
 function scorePlusPlus() {
     score+= clickStrength;
@@ -32,6 +33,7 @@ function updateButtons() {
     sawnick.buttonState();
     ourpleguy.buttonState();
     whip1.buttonState();
+    gromit1.buttonState();
 }
 
 function updatePage() {
